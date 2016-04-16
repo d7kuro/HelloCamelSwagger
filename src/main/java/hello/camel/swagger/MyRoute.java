@@ -18,7 +18,6 @@ public class MyRoute extends RouteBuilder {
 
     public void configure() throws Exception {
         from(IN).routeId(ROUTE_ID)
-                .to("direct:userCheck")
                 .process(exchange -> {
                     Message in = exchange.getIn();
                     List<String> list = new ArrayList<>();
